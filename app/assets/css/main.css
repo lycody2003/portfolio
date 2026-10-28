@@ -266,57 +266,73 @@ img {
   animation: rise-in 1s 0.15s ease both;
 }
 
-.profile-orbit {
+.hero-art {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 400px;
+  isolation: isolate;
+  animation: rise-in 1s 0.15s ease both;
+}
+
+.art-orbit {
   position: absolute;
-  width: min(340px, 85%);
+  width: min(330px, 80%);
   aspect-ratio: 1;
-  border: 1px solid rgba(197, 244, 103, 0.23);
+  border: 1px solid rgba(197, 244, 103, 0.2);
   border-radius: 50%;
 }
 
 .orbit-one {
-  transform: rotate(-25deg) scaleY(0.66);
-  animation: orbit 22s linear infinite;
+  transform: rotate(-25deg) scaleY(0.62);
+  animation: orbit 18s linear infinite;
 }
 
 .orbit-two {
+  transform: rotate(55deg) scaleY(0.62);
   border-color: rgba(164, 140, 255, 0.35);
-  transform: rotate(55deg) scaleY(0.66);
-  animation: orbit 28s linear infinite reverse;
+  animation: orbit 24s linear infinite reverse;
 }
 
-.profile-frame {
+.art-core {
   position: relative;
-  z-index: 1;
-  width: min(270px, 68%);
-  aspect-ratio: 4 / 5;
-  padding: 7px;
-  overflow: hidden;
-  background: linear-gradient(145deg, #c5f467, #6e7658);
-  border-radius: 48% 48% 18px 18px;
-  box-shadow: 0 0 70px rgba(197, 244, 103, 0.12);
-  animation: float 6s ease-in-out infinite;
+  display: grid;
+  place-items: center;
+  width: 210px;
+  aspect-ratio: 1;
+  background:
+    radial-gradient(circle at 35% 25%, #34392a, transparent 45%),
+    linear-gradient(145deg, #23251e, #11120f);
+  border: 1px solid rgba(197, 244, 103, 0.4);
+  border-radius: 46% 54% 62% 38% / 43% 39% 61% 57%;
+  box-shadow: 0 0 90px rgba(197, 244, 103, 0.09);
+  animation: morph 9s ease-in-out infinite;
 }
 
-.profile-photo {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  border-radius: inherit;
-  background: #20211c;
+.code-mark {
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 57px;
+  font-weight: 500;
+}
+
+.core-caption {
+  position: absolute;
+  bottom: 35px;
+  color: #a5a99a;
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 1px;
 }
 
 .floating-tag {
   position: absolute;
-  z-index: 2;
-  padding: 12px 14px;
+  padding: 12px 15px;
   background: #20211c;
   border: 1px solid var(--border);
   border-radius: 8px;
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 11px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
   animation: float 5s ease-in-out infinite;
 }
@@ -327,12 +343,12 @@ img {
 }
 
 .tag-top {
-  top: 15%;
+  top: 17%;
   right: 0;
 }
 
 .tag-bottom {
-  bottom: 17%;
+  bottom: 16%;
   left: 0;
   animation-delay: -2s;
 }
@@ -346,19 +362,20 @@ img {
 .art-cross {
   position: absolute;
   color: var(--accent);
-  font-size: 24px;
-  opacity: 0.8;
+  font-size: 26px;
+  opacity: 0.75;
 }
 
 .cross-one {
-  top: 12%;
-  left: 14%;
+  top: 13%;
+  left: 18%;
 }
 
 .cross-two {
-  right: 11%;
-  bottom: 22%;
+  right: 12%;
+  bottom: 18%;
 }
+
 
 .scroll-note {
   position: absolute;

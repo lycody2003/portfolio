@@ -1,4 +1,3 @@
-
 <script setup lang="ts">
 import { ref } from 'vue'
 import profileImage from '~/assets/images/profile.jpg'
@@ -126,13 +125,8 @@ const closeMenu = () => {
         L<span>.</span>
       </a>
 
-      <button
-        class="menu-toggle"
-        type="button"
-        :aria-expanded="menuOpen"
-        aria-label="Toggle navigation"
-        @click="menuOpen = !menuOpen"
-      >
+      <button class="menu-toggle" type="button" :aria-expanded="menuOpen" aria-label="Toggle navigation"
+        @click="menuOpen = !menuOpen">
         {{ menuOpen ? 'CLOSE −' : 'MENU +' }}
       </button>
 
@@ -155,23 +149,20 @@ const closeMenu = () => {
         </p>
 
         <h1>
-          Hi, I'm Chhunly.<br />
-          I build digital<br />
-          <span class="text-accent">experiences.</span>
+          Building digital<br />
+          experiences that<br />
+          <span class="text-accent">work beautifully.</span>
         </h1>
 
         <p class="hero-description">
-          Also known as Lycody online. I build and improve web
-          applications using Vue.js, Nuxt.js, Node.js, and Express.js.
-          I'm also developing practical DevOps skills through
-          hands-on learning and projects.
+          I'm Chory, a web developer focused on Vue.js, Nuxt.js,
+          Node.js, and building practical web applications.
         </p>
 
         <div class="hero-actions">
           <a class="button button-primary" href="#projects">
             Explore my work <span>↗</span>
           </a>
-
           <a class="button button-secondary" href="#contact">
             Get in touch
           </a>
@@ -182,47 +173,22 @@ const closeMenu = () => {
           <span class="meta-separator"></span>
           <span>BACKEND</span>
           <span class="meta-separator"></span>
-          <span>DEVOPS</span>
-        </div>
-
-        <div class="hero-socials">
-          <a href="https://github.com/lycody2003" target="_blank" rel="noopener noreferrer">
-            GitHub ↗
-          </a>
-          <a href="https://gitlab.com/lycody2003" target="_blank" rel="noopener noreferrer">
-            GitLab ↗
-          </a>
-          <a href="https://www.upwork.com/freelancers/~01d94f97670c205fc9" target="_blank" rel="noopener noreferrer">
-            Upwork ↗
-          </a>
+          <span>API INTEGRATION</span>
         </div>
       </div>
 
-      <div class="hero-art profile-art">
-        <div class="profile-orbit orbit-one"></div>
-        <div class="profile-orbit orbit-two"></div>
-
-        <div class="profile-frame">
-          <img
-            :src="profileImage"
-            alt="Chhunly, also known as Lycody"
-            class="profile-photo"
-            fetchpriority="high"
-          />
+      <div class="hero-art" aria-label="Abstract developer graphic">
+        <div class="art-orbit orbit-one"></div>
+        <div class="art-orbit orbit-two"></div>
+        <div class="art-core">
+          <span class="code-mark">&lt;/&gt;</span>
+          <span class="core-caption">DESIGN · BUILD · IMPROVE</span>
         </div>
-
-        <div class="floating-tag tag-top">
-          Vue.js <span>●</span>
-        </div>
-
-        <div class="floating-tag tag-bottom">
-          Node.js <span>↗</span>
-        </div>
-
+        <div class="floating-tag tag-top">Vue.js <span>●</span></div>
+        <div class="floating-tag tag-bottom">Node.js <span>↗</span></div>
         <div class="floating-tag tag-devops">
           DevOps <span>+</span>
         </div>
-
         <div class="art-cross cross-one">+</div>
         <div class="art-cross cross-two">+</div>
       </div>
@@ -283,11 +249,7 @@ const closeMenu = () => {
       </div>
 
       <div class="skill-groups">
-        <article
-          v-for="(group, index) in skills"
-          :key="group.title"
-          class="skill-group"
-        >
+        <article v-for="(group, index) in skills" :key="group.title" class="skill-group">
           <div class="skill-group-header">
             <span class="skill-index">0{{ index + 1 }}</span>
             <h3>{{ group.title }}</h3>
@@ -296,11 +258,7 @@ const closeMenu = () => {
           <p>{{ group.description }}</p>
 
           <div class="skills-panel">
-            <span
-              v-for="skill in group.items"
-              :key="skill"
-              class="skill-chip"
-            >
+            <span v-for="skill in group.items" :key="skill" class="skill-chip">
               {{ skill }}
               <span>↗</span>
             </span>
@@ -326,12 +284,8 @@ const closeMenu = () => {
       </div>
 
       <div class="project-list">
-        <article
-          v-for="project in projects"
-          :key="project.number"
-          class="project-card"
-          :class="`accent-${project.accent}`"
-        >
+        <article v-for="project in projects" :key="project.number" class="project-card"
+          :class="`accent-${project.accent}`">
           <div class="project-topline">
             <span>{{ project.number }} / 03</span>
             <span>{{ project.category }}</span>
@@ -360,13 +314,8 @@ const closeMenu = () => {
             </div>
 
             <div class="project-links">
-              <a
-                v-for="repo in project.repositories"
-                :key="repo.url"
-                :href="repo.url"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a v-for="repo in project.repositories" :key="repo.url" :href="repo.url" target="_blank"
+                rel="noopener noreferrer">
                 {{ repo.label }} ↗
               </a>
             </div>
@@ -375,10 +324,7 @@ const closeMenu = () => {
       </div>
     </section>
 
-    <section
-      id="experience"
-      class="section-wrap content-section experience-section"
-    >
+    <section id="experience" class="section-wrap content-section experience-section">
       <div class="section-heading">
         <p class="eyebrow">04 / EXPERIENCE & EDUCATION</p>
         <h2>
@@ -448,14 +394,8 @@ const closeMenu = () => {
       </div>
 
       <div class="social-list">
-        <a
-          v-for="social in socialLinks"
-          :key="social.label"
-          class="social-card"
-          :href="social.url"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a v-for="social in socialLinks" :key="social.label" class="social-card" :href="social.url" target="_blank"
+          rel="noopener noreferrer">
           <span class="social-name">{{ social.label }}</span>
           <span class="social-handle">{{ social.handle }}</span>
           <span class="social-arrow">↗</span>
@@ -477,21 +417,12 @@ const closeMenu = () => {
       </p>
 
       <div class="contact-actions">
-        <a
-          class="button button-primary"
-          href="https://www.upwork.com/freelancers/~01d94f97670c205fc9"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a class="button button-primary" href="https://www.upwork.com/freelancers/~01d94f97670c205fc9" target="_blank"
+          rel="noopener noreferrer">
           Hire me on Upwork ↗
         </a>
 
-        <a
-          class="button button-secondary"
-          href="https://t.me/Lycody2003"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a class="button button-secondary" href="https://t.me/Lycody2003" target="_blank" rel="noopener noreferrer">
           Message me on Telegram
         </a>
       </div>
