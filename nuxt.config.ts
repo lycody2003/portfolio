@@ -10,13 +10,15 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
 
   app: {
+    baseURL: process.env.NUXT_APP_BASE_URL || '/',
+
     head: {
       title: 'Chhunly (Lycody) | Full-Stack Web Developer',
       meta: [
         {
           name: 'description',
           content:
-            'Chhunly, also known as Lycody, is a web developer specializing in Vue.js, Nuxt.js, Node.js, Express.js, and practical DevOps learning.',
+            'Portfolio of Chhunly (Lycody), a developer working with Vue.js, Nuxt.js, Node.js, Express.js, and DevOps technologies.',
         },
         {
           name: 'theme-color',
