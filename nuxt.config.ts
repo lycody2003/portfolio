@@ -10,10 +10,10 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
 
   app: {
-    baseURL: process.env.NUXT_APP_BASE_URL || '/',
+  baseURL: process.env.NUXT_APP_BASE_URL || '/',
 
-    head: {
-      title: 'Chhunly (Lycody) | Full-Stack Web Developer',
+  head: {
+    title: 'Chhunly (Lycody) | Full-Stack Web Developer',
       meta: [
         {
           name: 'description',
