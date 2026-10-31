@@ -74,12 +74,8 @@ const projects = [
     accent: 'blue',
     repositories: [
       {
-        label: 'Frontend — GitHub',
-        url: 'https://github.com/lycody2003/lychat_client_side',
-      },
-      {
-        label: 'Backend — GitHub',
-        url: 'https://github.com/lycody2003/lychat_server_side',
+        label: 'View GitHub Repository',
+        url: 'https://github.com/lycody2003/lychat.git',
       },
     ],
   },
